@@ -1,7 +1,7 @@
 package programmers.level_1;
 
 public class No_133502 {
-    public int solution(int[] ingredient) { // 실행 시간 초과
+    public int solution(int[] ingredient) { // 시간 초과
         int answer = 0;
         String bugger = "1231";
 
