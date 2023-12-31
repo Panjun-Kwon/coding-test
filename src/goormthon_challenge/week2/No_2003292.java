@@ -1,11 +1,11 @@
-package goormthon_challenge.w2;
+package goormthon_challenge.week2;
 
 import java.util.Scanner;
 
 /**
  * 통증
  */
-public class Q3 {
+public class No_2003292 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt(); // 통증 크기
@@ -25,5 +25,20 @@ public class Q3 {
         N %= bandage;
 
         System.out.println(cnt);
+    }
+}
+
+class Answer_2003292 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        scanner.close();
+        int ans = 0;
+        int[] painKiller = {14, 7, 1};
+        for (int i : painKiller) {
+            ans += N / i;
+            N %= i;
+        }
+        System.out.println(ans);
     }
 }

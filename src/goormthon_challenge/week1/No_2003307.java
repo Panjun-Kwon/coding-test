@@ -1,4 +1,4 @@
-package goormthon_challenge.w1;
+package goormthon_challenge.week1;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * 이진수 정렬
  */
-public class Q5 {
+public class No_2003307 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner((System.in));
         int N = scanner.nextInt(); // 정렬할 정수의 수
@@ -59,6 +59,43 @@ class Num implements Comparable<Num> {
             }
         } else {
             return 1;
+        }
+    }
+}
+
+class Answer_2003307 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int K = sc.nextInt();
+        ArrayList<Pair> pairs = new ArrayList<>();
+
+        for(int i = 0; i < N; ++i) {
+            int num = sc.nextInt();
+            int bits = Integer.bitCount(num);
+            pairs.add(new Pair(bits, num));
+        }
+
+        Collections.sort(pairs);
+
+        System.out.println(pairs.get(K-1).num);
+    }
+}
+
+class Pair implements Comparable<Pair> {
+    int bits;
+    int num;
+
+    public Pair(int bits, int num) {
+        this.bits = bits;
+        this.num = num;
+    }
+
+    public int compareTo(Pair o) {
+        if (this.bits == o.bits) {
+            return o.num - this.num;
+        } else {
+            return o.bits - this.bits;
         }
     }
 }
