@@ -1,7 +1,5 @@
 package programmers.level_2;
 
-import programmers.level_1.No_42576;
-
 import java.util.ArrayList;
 import java.util.List;
 
